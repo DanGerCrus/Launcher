@@ -16,21 +16,13 @@ using System.Windows.Shapes;
 namespace Launcher.View
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для SC.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SC : Page
     {
-        public MainWindow()
+        public SC()
         {
             InitializeComponent();
-        }
-
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                DragMove();
-            }
         }
     }
 }

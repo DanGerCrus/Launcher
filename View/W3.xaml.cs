@@ -16,21 +16,13 @@ using System.Windows.Shapes;
 namespace Launcher.View
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для W3.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class W3 : Page
     {
-        public MainWindow()
+        public W3()
         {
             InitializeComponent();
-        }
-
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                DragMove();
-            }
         }
     }
 }

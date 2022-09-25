@@ -35,8 +35,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>packages\CommonServiceLocator.2.0.2\lib\net47\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +70,44 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\D3.xaml.cs">
+      <DependentUpon>D3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HOTS.xaml.cs">
+      <DependentUpon>HOTS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HsPage.xaml.cs">
+      <DependentUpon>HsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\OwerwatchPage.xaml.cs">
+      <DependentUpon>OwerwatchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SC.xaml.cs">
+      <DependentUpon>SC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SC2.xaml.cs">
+      <DependentUpon>SC2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\W3.xaml.cs">
+      <DependentUpon>W3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WoWPAge.xaml.cs">
+      <DependentUpon>WoWPAge.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\D3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HOTS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +120,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\OwerwatchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SC2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\W3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WoWPAge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -86,6 +159,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,10 +170,41 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
-    <Folder Include="View\Res\Backgraund\" />
-    <Folder Include="View\Res\Icons\" />
-    <Folder Include="View\Res\TopBackgraund\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Res\Icons\Close.png" />
+    <Resource Include="View\Res\Icons\codbo4.png" />
+    <Resource Include="View\Res\Icons\codmw.png" />
+    <Resource Include="View\Res\Icons\codmw2.png" />
+    <Resource Include="View\Res\Icons\diablo.png" />
+    <Resource Include="View\Res\Icons\hots.png" />
+    <Resource Include="View\Res\Icons\hs.png" />
+    <Resource Include="View\Res\Icons\Open.png" />
+    <Resource Include="View\Res\Icons\overwatch.png" />
+    <Resource Include="View\Res\Icons\sc.png" />
+    <Resource Include="View\Res\Icons\sc2.png" />
+    <Resource Include="View\Res\Icons\warcraaft3.png" />
+    <Resource Include="View\Res\Icons\WOW.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Res\Backgraund\MainDIABLO.png" />
+    <Resource Include="View\Res\Backgraund\MainHOTS.png" />
+    <Resource Include="View\Res\Backgraund\MainHS.png" />
+    <Resource Include="View\Res\Backgraund\MainOW.png" />
+    <Resource Include="View\Res\Backgraund\MainSC.png" />
+    <Resource Include="View\Res\Backgraund\MainSC2.png" />
+    <Resource Include="View\Res\Backgraund\MainW3.png" />
+    <Resource Include="View\Res\Backgraund\MainWOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Res\TopBackgraund\TopDIABLO.png" />
+    <Resource Include="View\Res\TopBackgraund\TopHOTS.png" />
+    <Resource Include="View\Res\TopBackgraund\TopHS.png" />
+    <Resource Include="View\Res\TopBackgraund\TopOW.png" />
+    <Resource Include="View\Res\TopBackgraund\TopSC.png" />
+    <Resource Include="View\Res\TopBackgraund\TopSC2.png" />
+    <Resource Include="View\Res\TopBackgraund\TopW3.png" />
+    <Resource Include="View\Res\TopBackgraund\TopWOW.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
